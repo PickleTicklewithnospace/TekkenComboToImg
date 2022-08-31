@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TekkenComboToImg/static/css/main.9b8d10af.css",
-    "main.js": "/TekkenComboToImg/static/js/main.325b87ea.js",
+    "main.js": "/TekkenComboToImg/static/js/main.257dd0fa.js",
     "static/js/787.5e0f1f48.chunk.js": "/TekkenComboToImg/static/js/787.5e0f1f48.chunk.js",
     "static/media/screw.png": "/TekkenComboToImg/static/media/screw.bf939e01c066b50fc95d.png",
     "static/media/123.png": "/TekkenComboToImg/static/media/123.e0ea6b18ace98291bd3f.png",
@@ -33,11 +33,11 @@
     "static/media/ub.png": "/TekkenComboToImg/static/media/ub.c9fc03dba986116af0e2.png",
     "index.html": "/TekkenComboToImg/index.html",
     "main.9b8d10af.css.map": "/TekkenComboToImg/static/css/main.9b8d10af.css.map",
-    "main.325b87ea.js.map": "/TekkenComboToImg/static/js/main.325b87ea.js.map",
+    "main.257dd0fa.js.map": "/TekkenComboToImg/static/js/main.257dd0fa.js.map",
     "787.5e0f1f48.chunk.js.map": "/TekkenComboToImg/static/js/787.5e0f1f48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9b8d10af.css",
-    "static/js/main.325b87ea.js"
+    "static/js/main.257dd0fa.js"
   ]
 }
