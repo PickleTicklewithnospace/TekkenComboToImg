@@ -1,0 +1,8 @@
+#myImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*height: 50px;*/
+    text-align: center;
+    height: 200px;
+}

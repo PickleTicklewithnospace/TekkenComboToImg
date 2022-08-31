@@ -2,9 +2,9 @@ import React, {createRef, useState} from 'react';
 import HandleSingleCommand from "./HandleSingleCommand";
 import HandleInput from "./HandleInput";
 import { exportComponentAsPNG } from "react-component-export-image";
-
+import './Style/HandleCombo.css';
 export default function HandleCombo() {
-
+  const [isGreen, setIsGreen] = useState(false)
   const [notation, setNotation] = useState("");
   const ref = createRef<HTMLDivElement>();
   const handleChange = (e: any) => {
@@ -18,7 +18,7 @@ export default function HandleCombo() {
     let elements: JSX.Element[] = [];
     for (const command of inputs) {
       elements.push(
-        <HandleSingleCommand command={command} />
+        <HandleSingleCommand commands={command} />
       )
     }
     newElements = elements.reduce(
@@ -33,6 +33,8 @@ export default function HandleCombo() {
         onClick={() =>
           exportComponentAsPNG(ref, {
             html2CanvasOptions: {
+              backgroundColor: "rgba(0,0,0,0)",
+              removeContainer: true,
               onclone: (clonedDoc) => {
                 const thing = clonedDoc.getElementById("myImage")
                 if (thing !== null) {
@@ -46,18 +48,10 @@ export default function HandleCombo() {
         Screenshot
       </button>
       </div>
-
       <div ref={ref} id="myImage" >
         { newElements }
       </div>
-              <input type="text" name="combo" onChange={handleChange} />
-
-    {/*<form>*/}
-
-    {/*  <label>*/}
-    {/*    Combo:*/}
-    {/*  </label>*/}
-    {/*</form>*/}
+      <input type="text" name="combo" onChange={handleChange} />
     </div>
 
   );

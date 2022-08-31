@@ -1,0 +1,13 @@
+.PlainText {
+    height: 50px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.PlainTextText {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

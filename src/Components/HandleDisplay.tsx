@@ -31,7 +31,7 @@ export default function HandleDisplay({ combo, ref }: HandleDisplayProps) {
   let elements: JSX.Element[] = [];
   for (const command of inputs) {
     elements.push(
-      <HandleSingleCommand command={command} />
+      <HandleSingleCommand commands={command} />
     )
   }
   const newElements = elements.reduce(
