@@ -31,7 +31,6 @@ export default function HandleSingleCommand({ commands }: handleSingleCommandPro
     qcb: "d,db,b",
     hcf: "b,db,d,df,f",
     hcb: "f,df,d,db,b",
-
   }
   if (!commands) {
     console.log("no command");
@@ -41,6 +40,11 @@ export default function HandleSingleCommand({ commands }: handleSingleCommandPro
   let elements = [];
 
   for (let command of separatedCommands) {
+    // Convert the shorthand (e.g. pewgf or qcf) to normal inputs
+    if (command in shorthand) {
+      command = shorthand[command];
+    }
+
     if (command.includes('"')) {
       // this is just plain text
       elements.push(
@@ -50,10 +54,7 @@ export default function HandleSingleCommand({ commands }: handleSingleCommandPro
     }
 
 
-     // Convert the shorthand (e.g. pewgf or qcf) to normal inputs
-    if (command in shorthand) {
-      command = shorthand[command];
-    }
+
     // 1,2,4,3
     // df2+3
     // f,n,d,df2

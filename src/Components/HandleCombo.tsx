@@ -11,7 +11,19 @@ export default function HandleCombo() {
     setNotation(e.target.value.split("+").join(""))
 
   }
-
+  const handleScreenshot = () =>
+    exportComponentAsPNG(ref, {
+      html2CanvasOptions: {
+        backgroundColor: "rgba(0,0,0,0)",
+        removeContainer: true,
+        onclone: (clonedDoc) => {
+          const thing = clonedDoc.getElementById("myImage")
+          if (thing !== null) {
+            thing.style.visibility = "visible";
+          }
+        }
+      }
+    })
   let newElements = <></>
   if (notation) {
     const inputs = notation.split(", ");
@@ -26,23 +38,14 @@ export default function HandleCombo() {
     );
   }
 
+
+
   return (
     <div>
       <div>
       <button
-        onClick={() =>
-          exportComponentAsPNG(ref, {
-            html2CanvasOptions: {
-              backgroundColor: "rgba(0,0,0,0)",
-              removeContainer: true,
-              onclone: (clonedDoc) => {
-                const thing = clonedDoc.getElementById("myImage")
-                if (thing !== null) {
-                  thing.style.visibility = "visible";
-                }
-              }
-            }
-          })
+        onClick={
+          handleScreenshot
         }
       >
         Screenshot
